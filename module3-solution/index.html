@@ -2,48 +2,81 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Module 2 - Assignment</title>
+  <title>Module 3 - Assignment 3</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-  <!-- Desktop/Tablet View Title -->
-  <h1 class="main-title">Our Menu</h1>
-  <!-- Mobile-Only Title -->
-  <h1 class="alt-title">Categories</h1>
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Food, LLC</a>
+        <button type="button" class="navbar-toggle collapsed visible-xs"
+                data-toggle="collapse" data-target="#navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="nav navbar-nav visible-xs">
+          <li><a href="#chicken">Chicken</a></li>
+          <li><a href="#beef">Beef</a></li>
+          <li><a href="#sushi">Sushi</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-  <!-- Chicken -->
-  <div class="section box1">
-    <div class="box-title">Chicken</div>
-    <p><strong>Description:</strong> Tender free-range chicken, seasoned with fresh herbs and grilled for a savory, slightly smoky flavor.</p>
-    <p><strong>Ingredients:</strong> Chicken breast, olive oil, garlic, rosemary, paprika, lemon zest, salt, pepper.</p>
-    <p>
-      Served with your choice of seasonal vegetables and sauce.
-      Add any sides you like to round out the meal.
-    </p>
+  <div id="top"></div>
+
+  <div class="container">
+    <h1 class="text-center">Our Menu</h1>
+
+    <div class="row">
+      <!-- Chicken -->
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div id="chicken" class="box">
+          <h3 class="text-center">Chicken</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <p><strong>End of Chicken section.</strong> <a href="#top">Back to Top</a></p>
+        </div>
+      </div>
+
+      <!-- Beef -->
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div id="beef" class="box">
+          <h3 class="text-center">Beef</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <p><strong>End of Beef section.</strong> <a href="#top">Back to Top</a></p>
+        </div>
+      </div>
+
+      <!-- Sushi -->
+      <div class="col-xs-12 col-sm-12 col-md-4">
+        <div id="sushi" class="box">
+          <h3 class="text-center">Sushi</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <p><strong>End of Sushi section.</strong> <a href="#top">Back to Top</a></p>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <!-- Beef -->
-  <div class="section box2">
-    <div class="box-title">Beef</div>
-    <p><strong>Description:</strong> Succulent grass-fed beef, marinated in soy and ginger, then seared to lock in all the flavor. Choose rare, medium, or well-done.</p>
-    <p><strong>Ingredients:</strong> Beef sirloin, soy sauce, fresh ginger, sesame oil, black pepper, spring onions.</p>
-    <p>
-      Enjoy this dish with roasted potatoes or steamed rice. 
-      We recommend a light salad on the side for extra freshness.
-    </p>
-  </div>
-
-  <!-- Sushi -->
-  <div class="section box3">
-    <div class="box-title">Sushi</div>
-    <p><strong>Description:</strong> Classic Japanese sushi rolls made with high-quality fish, vinegared rice, and crisp nori.</p>
-    <p><strong>Ingredients:</strong> Salmon, tuna, or eel (depending on the roll), sushi rice, nori, wasabi, soy sauce, pickled ginger.</p>
-    <p>
-      Options include California, Spicy Tuna, and Dragon Rolls, among others. 
-      Perfect for those who appreciate fresh flavors.
-    </p>
-  </div>
-
+  <!-- JS -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>
