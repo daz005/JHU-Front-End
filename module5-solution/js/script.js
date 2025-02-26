@@ -349,6 +349,7 @@ function insertItemPortionName(html,
 }
 
 function loadAboutPage() {
+  console.log("loadAboutPage...");
   $ajaxUtils.sendGetRequest(
       "snippets/about.html",
       function (responseText) {
@@ -363,12 +364,16 @@ function loadAboutPage() {
               }
           }
 
+          // Generate textual rating
+          var ratingText = randomRating + "-star rating";
+
           // Replace placeholder classes with generated values
           responseText = insertProperty(responseText, "class1", starClasses[0]);
           responseText = insertProperty(responseText, "class2", starClasses[1]);
           responseText = insertProperty(responseText, "class3", starClasses[2]);
           responseText = insertProperty(responseText, "class4", starClasses[3]);
           responseText = insertProperty(responseText, "class5", starClasses[4]);
+          responseText = insertProperty(responseText, "ratingText", ratingText);
 
           document.querySelector("#main-content").innerHTML = responseText;
       },
@@ -383,7 +388,6 @@ document.addEventListener("DOMContentLoaded", function () {
       loadAboutPage();
   });
 });
-
 
 
 global.$dc = dc;
