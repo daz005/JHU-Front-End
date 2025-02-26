@@ -348,6 +348,43 @@ function insertItemPortionName(html,
   return html;
 }
 
+function loadAboutPage() {
+  $ajaxUtils.sendGetRequest(
+      "snippets/about.html",
+      function (responseText) {
+          var randomRating = Math.floor(Math.random() * 5) + 1; // Generate random number from 1 to 5
+          var starClasses = [];
+
+          for (var i = 1; i <= 5; i++) {
+              if (i <= randomRating) {
+                  starClasses.push("fa fa-star"); // Filled star
+              } else {
+                  starClasses.push("fa fa-star-o"); // Empty star
+              }
+          }
+
+          // Replace placeholder classes with generated values
+          responseText = insertProperty(responseText, "class1", starClasses[0]);
+          responseText = insertProperty(responseText, "class2", starClasses[1]);
+          responseText = insertProperty(responseText, "class3", starClasses[2]);
+          responseText = insertProperty(responseText, "class4", starClasses[3]);
+          responseText = insertProperty(responseText, "class5", starClasses[4]);
+
+          document.querySelector("#main-content").innerHTML = responseText;
+      },
+      false
+  );
+}
+
+// Attach event listener to "About" menu
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("navAbout").addEventListener("click", function (event) {
+      event.preventDefault();
+      loadAboutPage();
+  });
+});
+
+
 
 global.$dc = dc;
 
