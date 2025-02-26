@@ -349,7 +349,6 @@ function insertItemPortionName(html,
 }
 
 function loadAboutPage() {
-  console.log("loadAboutPage...");
   $ajaxUtils.sendGetRequest(
       "snippets/about.html",
       function (responseText) {
