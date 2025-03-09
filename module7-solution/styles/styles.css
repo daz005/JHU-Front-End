@@ -1,0 +1,17 @@
+.quantity-input {
+    width: 60px;
+    margin-right: 10px;
+  }
+  
+  .list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .float-right {
+    margin-left: auto;
+  }
+  
+
+  
