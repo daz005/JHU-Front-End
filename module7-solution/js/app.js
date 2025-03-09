@@ -8,10 +8,10 @@
         // Initial "To Buy" list
         var toBuyItems = [
           { name: "cookies", quantity: 10, pricePerItem: 2 },
-          { name: "chips", quantity: 5, pricePerItem: 3 },
-          { name: "sodas", quantity: 8, pricePerItem: 1.5 },
-          { name: "apples", quantity: 6, pricePerItem: 0.5 },
-          { name: "bananas", quantity: 12, pricePerItem: 0.3 }
+          { name: "chips", quantity: 20, pricePerItem: 3 },
+          { name: "sodas", quantity: 30, pricePerItem: 1.5 },
+          { name: "apples", quantity: 40, pricePerItem: 0.5 },
+          { name: "bananas", quantity: 50, pricePerItem: 0.3 }
         ];
   
         var boughtItems = [];
