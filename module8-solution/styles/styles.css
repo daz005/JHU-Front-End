@@ -50,3 +50,9 @@ input[type="text"] {
     transform: rotate(360deg);
   }
 }
+
+.mt-2 {
+  margin-top: 1rem;
+}
+
+

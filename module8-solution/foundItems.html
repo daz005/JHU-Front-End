@@ -1,0 +1,16 @@
+<div>
+    <ul class="list-group">
+      <li class="list-group-item" ng-repeat="item in directiveCtrl.items track by $index">
+        <b>{{ item.name }}</b> ({{ item.short_name }}): {{ item.description }}
+        <button 
+          class="btn btn-danger btn-sm" 
+          ng-click="directiveCtrl.onRemove({ index: $index })">
+          Don't want this one!
+        </button>
+      </li>
+    </ul>
+    <div class="text-danger mt-2" ng-if="directiveCtrl.items.length === 0">
+      Nothing found
+    </div>
+  </div>
+  
