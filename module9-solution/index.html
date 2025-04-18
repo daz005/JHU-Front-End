@@ -1,1 +1,29 @@
 
+<!doctype html>
+<html lang="en" ng-app="MenuApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Menu Categories</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.min.js"></script>
+
+    <!-- Module Files -->
+    <script src="menuapp/menuapp.module.js"></script>
+    <script src="data/data.module.js"></script>
+
+    <!-- Component Files -->
+    <script src="menuapp/categories.component.js"></script>
+    <script src="menuapp/items.component.js"></script>
+
+    <!-- Service File -->
+    <script src="data/menudata.service.js"></script>
+
+    <!-- Routes -->
+    <script src="routes.js"></script>
+
+  </head>
+  <body>
+    <h1>Module 9 - Assignment 9 (Due April 22, Tuesday by 11:59pm) </h1>
+    <ui-view></ui-view>
+  </body>
+</html>
