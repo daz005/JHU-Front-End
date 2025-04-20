@@ -1,27 +1,27 @@
 <div class="container">
   <form name="signupForm" ng-submit="signupCtrl.submit()" novalidate>
     <label>First Name:</label>
-    <input type="text" name="firstName" ng-model="signupCtrl.user.firstName" required />
+    <input type="text" name="firstName" ng-model="signupCtrl.user.firstName" required style="color: black; background-color: white;"/>
     <br/>
 
     <label>Last Name:</label>
-    <input type="text" name="lastName" ng-model="signupCtrl.user.lastName" required />
+    <input type="text" name="lastName" ng-model="signupCtrl.user.lastName" required style="color: black; background-color: white;"/>
     <br/>
 
     <label>Email:</label>
-    <input type="email" name="email" ng-model="signupCtrl.user.email" required />
+    <input type="email" name="email" ng-model="signupCtrl.user.email" required style="color: black; background-color: white;"/>
     <br/>
 
     <label>Phone:</label>
-    <input type="tel" name="phone" ng-model="signupCtrl.user.phone" ng-pattern="/^\d{10}$/" required />
+    <input type="tel" name="phone" ng-model="signupCtrl.user.phone" ng-pattern="/^\d{10}$/" required style="color: black; background-color: white;"/>
     <br/>
 
     <label>Favorite Menu Item (e.g., L1):</label>
-    <input type="text" name="favDish" ng-model="signupCtrl.user.favDish" ng-blur="signupCtrl.validateDish()" />
+    <input type="text" name="favDish" ng-model="signupCtrl.user.favDish" ng-blur="signupCtrl.validateDish()" style="color: black; background-color: white;"/>
     <p ng-if="signupCtrl.invalidDish">No such menu number exists.</p>
     <br/>
 
-    <button type="submit" ng-disabled="signupForm.$invalid">Submit</button>
+    <button type="submit" ng-disabled="signupForm.$invalid" >Submit</button>
     <p ng-if="signupCtrl.success">Your information has been saved.</p>
   </form>
 </div>
