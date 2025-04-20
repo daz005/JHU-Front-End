@@ -37,7 +37,9 @@ function MenuService($http, ApiPath) {
       // console.log("getMenuItem response.data.getCategories=" + response.data.getCategories);
       // console.log(response.data);
       // console.log(url);
-      response.data.categoryShortName = category;
+      if (response.data) {
+        response.data.categoryShortName = category;
+      }
       return response.data;
     });
   };
