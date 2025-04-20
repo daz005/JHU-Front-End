@@ -12,7 +12,13 @@ function MenuService($http, ApiPath) {
   service.getCategories = function () {
     return $http.get(ApiPath + '/categories.json').then(function (response) {
       //console.log("getCategories response.data=" + response.data);
-      return response.data;
+      if (response) {
+        if (response.data) {
+          return response.data;
+        }   
+      }
+
+      return null;
     });
   };
 
@@ -21,7 +27,14 @@ function MenuService($http, ApiPath) {
     return $http.get(ApiPath + '/menu_items/' + category + '.json').then(function (response) {
 
       //console.log("getMenuItems response.data=" + response.data);
-      return response.data;
+      if (response) {
+        if (response.data) {
+          return response.data;
+        }   
+      }
+
+      return null;
+
     });
   };
 
@@ -37,10 +50,16 @@ function MenuService($http, ApiPath) {
       // console.log("getMenuItem response.data.getCategories=" + response.data.getCategories);
       // console.log(response.data);
       // console.log(url);
-      if (response.data) {
-        response.data.categoryShortName = category;
+
+      if (response) {
+        if (response.data) {
+          response.data.categoryShortName = category;
+          return response.data;
+        }   
       }
-      return response.data;
+
+      return null;     
+
     });
   };
 
