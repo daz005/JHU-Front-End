@@ -10,13 +10,15 @@
       <p>Last Name: {{myInfoCtrl.user.lastName}}</p>
       <p>Email: {{myInfoCtrl.user.email}}</p>
       <p>Phone: {{myInfoCtrl.user.phone}}</p>
-  
+
+
       <div ng-if="myInfoCtrl.menuItem">
         <h4>Favorite Dish</h4>
         <p>Name: {{myInfoCtrl.menuItem.name}}</p>
         <p>Description: {{myInfoCtrl.menuItem.description}}</p>
-        <img ng-src="images/{{myInfoCtrl.menuItem.short_name}}.jpg" alt="{{myInfoCtrl.menuItem.name}}" width="200"/>
+        <img width="200" ng-src="images/menu/{{myInfoCtrl.menuItem.categoryShortName}}/{{myInfoCtrl.menuItem.short_name}}.jpg" alt="{{myInfoCtrl.menuItem.name}}">
       </div>
+
     </div>
   </div>
 
