@@ -14,26 +14,26 @@ describe('MenuService', function () {
       $httpBackend.verifyNoOutstandingRequest();
     });
   
-    it('should return menu item if it exists', function () {
-      var fakeItem = { name: "Lo Mein", short_name: "L1" };
+    it('1) should return menu item if it exists', function () {
+      var fakeItem = { name: "Lo Mein", short_name: "L1", categoryShortName: "L"};
       $httpBackend.expectGET(ApiBasePath + "/menu_items/L/menu_items/0.json")
                   .respond(fakeItem);
   
       MenuService.getMenuItem("L1").then(function (response) {
-        console.log("fakeItem=" + fakeItem);
-        console.log("response =" + response);
+        console.log(fakeItem);
+        console.log(response);
         expect(response).toEqual(fakeItem);
       });
   
       $httpBackend.flush();
     });
   
-    it('should return null if menu item does not exist', function () {
+    it('2) should return null if menu item does not exist', function () {
       $httpBackend.expectGET(ApiBasePath + "/menu_items/X/menu_items/99.json")
                   .respond(null);
   
       MenuService.getMenuItem("X99").then(function (response) {
-        console.log("expect null=" + response);
+        console.log(response);
         expect(response).toBeNull();
       });
   

@@ -20,7 +20,11 @@
   <script>
     angular.module('common', []);
   </script>
-  
+
+<script>
+    angular.module('common', []).constant('ApiPath', 'https://coursera-jhu-default-rtdb.firebaseio.com');
+  </script>
+
   <!-- App Scripts -->
   <script src="../src/common/menu.service.js"></script>
 
